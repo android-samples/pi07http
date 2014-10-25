@@ -64,9 +64,9 @@ public class MainActivity extends Activity {
 		protected String doInBackground(String... params) {
 			if(params.length == 0)return null;
 			String result = null;
-			DefaultHttpClient client = new DefaultHttpClient();
 			try{
 				mUrl = params[0];
+				DefaultHttpClient client = new DefaultHttpClient();
 				HttpGet request = new HttpGet(mUrl);
 				HttpResponse response = client.execute(request);
 				if(response.getStatusLine().getStatusCode() == HttpStatus.SC_OK){
